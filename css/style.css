@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: #e8e8e8;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+.phone-shell {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 浏览器顶栏 ===== */
+.browser-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 14px;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.browser-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.browser-title {
+  text-align: center;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.browser-title-main {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.browser-title-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 1px;
+}
+
+/* ===== 页面主体 ===== */
+.page {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 72px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== 个人信息区 ===== */
+.profile-section {
+  position: relative;
+  height: 200px;
+  overflow: visible;
+}
+
+.profile-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #5dd4f7 0%, #6ec5ff 40%, #7ab8f5 100%);
+}
+
+.profile-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.user-name {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.gender-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #3b9eff;
+}
+
+/* ===== 待办卡片 ===== */
+.todo-card {
+  position: relative;
+  z-index: 5;
+  margin: -28px 16px 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.todo-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.todo-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== 功能网格 ===== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 0;
+  padding: 24px 8px 16px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 12px 4px;
+  transition: opacity 0.15s;
+}
+
+.service-item:active {
+  opacity: 0.65;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+}
+
+.service-item span {
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.35;
+  color: #333;
+}
+
+/* 渐变色 */
+.grad-orange  { background: linear-gradient(135deg, #ff9a56, #ff6b8a); }
+.grad-cyan    { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
+.grad-pink    { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.grad-blue    { background: linear-gradient(135deg, #4facfe, #00c6fb); }
+.grad-purple  { background: linear-gradient(135deg, #a18cd1, #8b6fc0); }
+.grad-orange2 { background: linear-gradient(135deg, #ff8c42, #ff6b6b); }
+.grad-cyan2   { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.grad-pink2   { background: linear-gradient(135deg, #fa709a, #fee140); }
+.grad-blue2   { background: linear-gradient(135deg, #667eea, #764ba2); }
+.grad-purple2 { background: linear-gradient(135deg, #c471ed, #f64f59); }
+.grad-orange3 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.grad-cyan3   { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.grad-pink3   { background: linear-gradient(135deg, #ee9ca7, #ffdde1); }
+.grad-blue3   { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+
+/* ===== 底部导航 ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  z-index: 30;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 6px;
+  text-decoration: none;
+  color: #999;
+  gap: 3px;
+  transition: color 0.15s;
+}
+
+.nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item span {
+  font-size: 11px;
+}
+
+.nav-item.active {
+  color: #2dd4bf;
+}
+
+.nav-item.active svg {
+  color: #2dd4bf;
+}
+
+/* ===== 桌面端预览 ===== */
+@media (min-width: 431px) {
+  body {
+    padding: 20px 0;
+    align-items: center;
+  }
+
+  .phone-shell {
+    min-height: calc(100vh - 40px);
+    min-height: calc(100dvh - 40px);
+    border-radius: 16px;
+  }
+
+  .bottom-nav {
+    border-radius: 0 0 16px 16px;
+  }
+}
