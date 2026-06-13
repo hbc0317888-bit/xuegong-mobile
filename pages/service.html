@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>功能详情</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+</head>
+<body>
+  <div class="phone-shell">
+    <header class="sub-header">
+      <a class="sub-back" href="../index.html" aria-label="返回">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <h1 class="sub-title" id="pageTitle">功能详情</h1>
+      <span class="sub-placeholder"></span>
+    </header>
+
+    <div class="page sub-page">
+      <section class="sub-hero">
+        <h2 id="heroTitle">加载中...</h2>
+        <p id="heroDesc"></p>
+      </section>
+
+      <section class="info-card" id="infoList"></section>
+
+      <button class="primary-btn" id="actionBtn" type="button" hidden>操作</button>
+    </div>
+  </div>
+
+  <script src="../js/services.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    const service = SERVICES[id];
+
+    if (!service) {
+      document.getElementById('pageTitle').textContent = '页面不存在';
+      document.getElementById('heroTitle').textContent = '未找到该功能';
+      document.getElementById('heroDesc').textContent = '请返回首页重新选择。';
+    } else {
+      document.title = service.title + ' - 学工系统';
+      document.getElementById('pageTitle').textContent = service.title;
+      document.getElementById('heroTitle').textContent = service.title;
+      document.getElementById('heroDesc').textContent = service.desc;
+
+      const list = document.getElementById('infoList');
+      service.items.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'info-row';
+        row.innerHTML = `<span class="info-label">${item.label}</span><span class="info-value">${item.value}</span>`;
+        list.appendChild(row);
+      });
+
+      if (service.action) {
+        const btn = document.getElementById('actionBtn');
+        btn.hidden = false;
+        btn.textContent = service.action;
+        btn.addEventListener('click', () => {
+          alert('「' + service.action + '」功能演示中，后续可对接真实业务接口。');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
