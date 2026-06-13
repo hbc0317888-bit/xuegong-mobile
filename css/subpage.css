@@ -1,0 +1,264 @@
+.sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.sub-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sub-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+
+.sub-placeholder {
+  width: 36px;
+}
+
+.sub-page {
+  padding: 16px;
+  padding-bottom: 88px;
+}
+
+.sub-hero {
+  background: linear-gradient(135deg, #5dd4f7 0%, #7ab8f5 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.sub-hero h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.sub-hero p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.92;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #333;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.primary-btn:active {
+  opacity: 0.85;
+}
+
+/* 通讯录 */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-group {
+  margin-bottom: 20px;
+}
+
+.group-title {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+.contact-item:active {
+  background: #fafafa;
+}
+
+.contact-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5dd4f7, #7ab8f5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-role {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.contact-phone {
+  flex-shrink: 0;
+}
+
+/* 我的 */
+.mine-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mine-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #e8f4fc;
+}
+
+.mine-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mine-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.mine-info p {
+  font-size: 13px;
+  color: #999;
+}
+
+.menu-list {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:active {
+  background: #fafafa;
+}
+
+.menu-item span:first-child {
+  flex: 1;
+}
+
+.menu-badge {
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
